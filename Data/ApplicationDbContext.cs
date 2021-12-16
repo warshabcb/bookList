@@ -10,7 +10,7 @@ namespace booklist.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
+            
         }
         public DbSet<Book>? Libros { get; set; }
 

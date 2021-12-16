@@ -1,6 +1,18 @@
-var builder = WebApplication.CreateBuilder(args);
 
+
+
+
+using booklist.Data;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
+string connString = builder.Configuration.GetConnectionString("Ubuntu");
 // Add services to the container.
+//Services.AddDbContext<ApplicationDbContext>(option=> option.UseSqlServer(Configuration.GetConnectionString("Ubuntu")));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+   options.UseSqlServer(builder.Configuration.GetConnectionString("Ubuntu"));
+});
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
