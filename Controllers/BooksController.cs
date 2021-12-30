@@ -14,8 +14,13 @@ namespace booklist.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            Alert("El tutorial ha finalizado con éxito", NotificationType.success);
+            // Alert("El tutorial ha finalizado con éxito", NotificationType.success);
             return View();
+        }
+
+        public void GetAll()
+        {
+
         }
     }
 }
