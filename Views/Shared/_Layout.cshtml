@@ -34,7 +34,8 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            @Html.Partial("_NotificationPanel")
+            <partial name ="_NotificationPanel">
+            @* @Html.Partial("_NotificationPanel") *@
             @RenderBody()
         </main>
     </div>

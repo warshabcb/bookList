@@ -12,7 +12,7 @@ namespace booklist.Data
         {
             
         }
-        public DbSet<Book>? Libros { get; set; }
+        public DbSet<Book> Books { get; set; }
 
     }
 }
